@@ -5,9 +5,11 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "test": "ng test",
+    "test-silent": "ng test --no-watch --browsers=ChromeHeadlessCI",
+    "e2e": "ng e2e",
+    "e2e-silent": "ng e2e --protractor-config=e2e/protractor-ci.conf.js"
   },
   "private": true,
   "dependencies": {
