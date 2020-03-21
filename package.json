@@ -9,7 +9,9 @@
     "test": "ng test",
     "test-silent": "ng test --no-watch --browsers=ChromeHeadlessCI",
     "e2e": "ng e2e",
-    "e2e-silent": "ng e2e --protractor-config=e2e/protractor-ci.conf.js"
+    "e2e-silent": "ng e2e --protractor-config=e2e/protractor-ci.conf.js",
+    "e2e-cucumber": "webdriver-manager update && protractor e2e/protractor-cucumber.conf.js",
+    "e2e-cucumber-silent": "webdriver-manager update && protractor e2e/protractor-cucumber-ci.conf.js"
   },
   "private": true,
   "dependencies": {
@@ -21,8 +23,17 @@
     "@angular/platform-browser": "~9.0.5",
     "@angular/platform-browser-dynamic": "~9.0.5",
     "@angular/router": "~9.0.5",
+    "@types/chai": "^4.2.11",
+    "@types/cucumber": "^6.0.1",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "cucumber": "^6.0.5",
+    "cucumber-pretty": "^6.0.0",
+    "generic-cucumber-protractor-framework": "^1.8.7",
+    "protractor-cucumber-framework": "^6.2.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
+    "webdriver-manager": "^12.1.7",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
